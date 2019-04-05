@@ -1,5 +1,6 @@
 import React from 'react';
 import ChatBox from "./ChatBox";
+import GifBox from "./GifBox";
 import Message from "./Message";
 
 class Messages extends React.Component {
@@ -59,7 +60,6 @@ class Messages extends React.Component {
                         sendMessage={this.props.sendMessage}
                         toggleGif={this.toggleGif.bind(this)}
                     />
-
             </div>
         )
     }

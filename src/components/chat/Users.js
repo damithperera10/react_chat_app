@@ -19,7 +19,6 @@ class Users extends React.Component {
     render() {
         return (
             <div className="users col-xs-12 col-sm-12 col-md-4 col-lg-2">
-                <h6>Online Users</h6>
                 {this.state.users.length ? this.state.users.map((user, i) => {
                     return (
                         <div className="user" key={i}>

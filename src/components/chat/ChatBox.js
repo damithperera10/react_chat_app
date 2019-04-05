@@ -32,6 +32,7 @@ class ChatBox extends React.Component{
     render(){
         return (
             <div className="input-group chatbox col-xs-12 col-sm-12 col-md-8 col-lg-10">
+
                 <input
                     className="form-control"
                     placeholder="Type message"
