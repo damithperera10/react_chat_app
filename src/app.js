@@ -8,11 +8,22 @@ import Chat from './components/chat/Chat';
 
 class App extends React.Component{
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            userLoggedIn: false
+        }
+    }
+
+    updateLoggedInStatus(status) {
+        this.setState({ userLoggedIn: status })
+    }
+
     render(){
         return(
             <React.Fragment>
-                <Navbar/>
-                <Chat/>
+                <Chat loginStatus = {this.state.userLoggedIn} updateLoggedInStatus={this.updateLoggedInStatus.bind(this)}/>
+                <Navbar userLoggedIn = {this.state.userLoggedIn}/>
             </React.Fragment>
         )
     }
